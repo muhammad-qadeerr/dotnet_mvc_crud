@@ -1,0 +1,14 @@
+﻿@model MVC_in_Dotnet.Models.Student
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+    <h3>You Entered the following Student Data</h3>
+    <h3>Name: @Model.Name</h3>
+    <h3>RollNo: @Model.RollNo</h3>
+    <h3>CGPA: @Model.CGPA</h3>
+    <h3>Semester: @Model.Semester</h3>
+
+
+    Click <a asp-action="ListStudents">here</a> to view all students.
+</div>

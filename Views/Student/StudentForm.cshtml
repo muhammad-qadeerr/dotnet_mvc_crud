@@ -1,0 +1,45 @@
+﻿@using MVC_in_Dotnet.Models
+@model Student   // This is a Strongly Typed View now.
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h5 class="bg-dark text-white text-center p-2">Add a New Student</h5>
+
+   @*  post method for getting data from the client *@
+
+    <form method="post" action="/Student/StudentForm">    
+       @*  <div asp-validation-summary="All"></div> *@
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label class ="form-label" asp-for="Name"></label><br />
+            <input class="form-control" asp-for="Name" /><br />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label class="form-label" asp-for="RollNo"></label><br />
+            <input class="form-control" asp-for="RollNo" /><br />
+            <span asp-validation-for="RollNo"></span>
+        </div>
+       <div>
+            <label class="form-label" asp-for="CGPA"></label><br />
+            <input class="form-control" asp-for="CGPA" /><br />
+            <span asp-validation-for="CGPA"></span>
+       </div>
+       <div>
+            <label class="form-label" asp-for="Semester"></label><br />
+            <input class="form-control" asp-for="Semester" /><br /><br />
+            <span asp-validation-for="Semester"></span>
+       </div>
+       <br />
+        
+        <button class="btn btn-dark">Save Student</button>
+    </form>
+</body>
+</html>
